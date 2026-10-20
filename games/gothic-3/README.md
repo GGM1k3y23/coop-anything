@@ -4,7 +4,7 @@
 |---|---|
 | Engine | Genome; see the unofficial [Gothic 3 SDK](https://github.com/georgeto/gothic3sdk) |
 | Versions tested | Steam build 1037023, `Gothic3.exe` 1.75.20108.14 (Community Patch 1.75.14), x86, with Parallel Universe Patch files present |
-| Projects | G3 Together (own mod, built from zero on the SDK, GPL-3.0-or-later; source not yet published). Earlier projects: [OTHER-PROJECTS.md](OTHER-PROJECTS.md) |
+| Projects | [G3 Together](https://github.com/GGM1k3y23/g3-together) (own mod, built from zero on the SDK, GPL-3.0-or-later; work in progress, human review pending). Earlier projects: [OTHER-PROJECTS.md](OTHER-PROJECTS.md) |
 | QA level | automated (bot suites with two real game clients on one PC, each stage 3 passes plus a failing negative control) |
 | Last updated | 2026-10-19 |
 
@@ -23,8 +23,8 @@ playthrough, more than two players.
 - **G3 Together** (this project, 2026-10-17 to 2026-10-19): a native script DLL built on
   the Gothic 3 SDK, with [ENet](https://github.com/lsalzman/enet) 1.3.18 (MIT) for direct
   IP. Host plus clients, regional NPC ownership, host-kept ledger for story, items and
-  the campaign save. GPL-3.0-or-later. Source not yet published; a public repository will
-  follow. Details below and in [NOTES.md](NOTES.md).
+  the campaign save. GPL-3.0-or-later. Source: [GGM1k3y23/g3-together](https://github.com/GGM1k3y23/g3-together)
+  (work in progress, no release yet). Details below and in [NOTES.md](NOTES.md).
 - Earlier projects: Myrtana Accord (tested: only quest state is shared; players do not
   see each other, no NPC or combat sync, rejoining is refused), Gothic 3 Heroes and
   Sative's Gothic 3 Multiplayer (no download available to test). None of them gave usable
@@ -179,7 +179,7 @@ clients plus a negative control that fails)
 P1 (meteor) was merged into `master` on 2026-10-19 but is not yet in the mod's stage
 table.
 
-**Test harness** (part of the mod repository, not yet published)
+**Test harness** (part of the mod repository, `qa/`)
 
 - `qa/together.py --suite <name> [--negative-control]` starts a host and a client copy,
   sends the in-game bot numbered commands through a file, reads its answers from the
@@ -216,8 +216,8 @@ Last results (2026-10-19, details and run IDs in
 ## How to play
 
 G3 Together has no public release yet. The owner hands a player package (DLL, example
-INIs, German player guide, log collector) to testers privately; a public release will
-follow once the source is published. In short: same Steam version with Community Patch
+INIs, German player guide, log collector) to testers privately; a release will
+follow after human playtesting. Building from source: see the repository README. In short: same Steam version with Community Patch
 1.75.14 and the same options on every machine (the mod checks at join), the DLL in
 `<game dir>\scripts\`, a `g3together.ini` with `role`, the host's `address` and `name`.
 For the internet the guide suggests a virtual LAN (Tailscale or ZeroTier) or a forwarded
@@ -250,4 +250,4 @@ UDP port; that path is untested. Do not mix it with another co-op DLL in `script
 - Bows and spells for the watcher (replay the shot on the puppet without its result),
   long-lived summons, identity checks (guards, crimes, party).
 - Test whether a friendly NPC hit by a remote player fights back.
-- Internet play, then a longer human playthrough, then publish source and release.
+- Internet play, then a longer human playthrough, then a first release.

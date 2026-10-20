@@ -776,6 +776,32 @@
   - https://github.com/yevh/Gothic3/releases/tag/v0.35.0-beta.1
   - https://github.com/yevh/Gothic3/blob/327c0b0a2409db1f7ba0ba9a7f09cb171c5500e0/LICENSE
   checked: '2026-10-17'
+- game: Gothic 3
+  year: 2006
+  engine: Genome
+  project: G3 Together
+  url: https://github.com/GGM1k3y23/g3-together
+  other_urls: []
+  kind: mod
+  status: alpha
+  coop_scope:
+    players_visible: 'yes'
+    story: 'yes'
+    enemies: 'yes'
+    world_state: partial
+    items: 'yes'
+  players: '2'
+  networking: direct-ip
+  open_source: 'yes'
+  last_activity: '2026-10'
+  qa: automated
+  notes: 'Built from zero on the Gothic 3 SDK, ENet, GPL-3.0-or-later; work in progress. Steam CP 1.75.14. Bot suites
+    with two real game clients on one PC (each stage 3 passes plus a failing negative control): players, NPCs,
+    combat, quests, dialogs, items, trade, clock, saves and regional NPC ownership. Human review pending; internet
+    play, a full playthrough and more than two players untested. See games/gothic-3.'
+  sources:
+  - https://github.com/GGM1k3y23/g3-together
+  checked: '2026-10-20'
 - game: 'The Elder Scrolls III: Morrowind'
   year: 2002
   engine: OpenMW

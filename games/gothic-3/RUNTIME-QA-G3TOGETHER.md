@@ -2,7 +2,7 @@
 
 Evidence behind the QA level of G3 Together in [README.md](README.md). Run IDs and series
 names refer to the owner's private run folders and logs; they are not published. The
-mod's source and its suites are not published yet. The earlier Myrtana Accord test is summarised in
+mod's source and its suites: [GGM1k3y23/g3-together](https://github.com/GGM1k3y23/g3-together). The earlier Myrtana Accord test is summarised in
 [OTHER-PROJECTS.md](OTHER-PROJECTS.md).
 
 ## Tested stack

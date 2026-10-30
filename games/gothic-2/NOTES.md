@@ -10,7 +10,7 @@ for Gothic 3 ([write-up](../gothic-3/README.md)).
 |---|---|
 | Game | Gothic II: Night of the Raven (2003). Store, version and SHA-256 of `Gothic2.exe`: unknown, to record from the owner's install |
 | Engine | ZenGin (shared with Gothic 1). Game logic in Daedalus scripts, run by the engine's parser |
-| Source | No engine source. Two reverse engineered SDKs cover the exe: the Union / Gothic UserAPI headers (`ZenGin/Gothic_II_Addon/API`, shipped inside GothicCoop) and Union plugins loaded from `<game dir>\Autorun` or the Steam Workshop |
+| Source | No engine source. The reverse engineered Union SDK with Gothic UserAPI headers (`ZenGin/Gothic_II_Addon/API`, shipped inside GothicCoop) covers the exe. Union plugins load from `<game dir>\Autorun` or the Steam Workshop |
 | Engine multiplayer | None in the game. Existing mods add their own (ENet) |
 | Shipping | A Union plugin DLL ships without game files. Steam Workshop already carries Union plugins for this game |
 

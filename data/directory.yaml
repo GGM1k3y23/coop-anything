@@ -695,25 +695,38 @@
   project: Gothic Coop (Union plugin)
   url: https://github.com/Gothic-Workshop/GothicCoop
   other_urls:
+  - https://gitlab.com/gothiccoop/gothiccoop
+  - https://github.com/DamianQualshy/GothicCoop
+  - https://steamcommunity.com/sharedfiles/filedetails/?id=2982365243
   - https://vgtimes.com/games/gothic/files/73962-modo-cooperativo.html
   kind: mod
   status: partial
   coop_scope:
+    players_visible: 'yes'
     story: unknown
-    enemies: unknown
+    enemies: 'yes'
     world_state: unknown
     items: unknown
   players: unknown
   networking: vpn-needed
   open_source: 'yes'
   last_activity: 2026-02
-  qa: none
-  notes: 'AGPL-3.0 Union plugin for co-op in Gothic 1 and Gothic II: Night of the Raven, continuing Colder''s earlier
-    GitLab project. Direct IP with VPN tools like Radmin often needed. Last push 2026-02.'
+  qa: community-reports
+  notes: 'AGPL-3.0 Union plugin (ENet) for Gothic 1, Gothic Sequel, Gothic II and Night of the Raven. Started by Colder
+    on GitLab (last commit 2023-09), continued as Gothic-Workshop/GothicCoop; the newer branch broken-coop (2025-12-30)
+    adds a TOML config, world time sync and builds per game. Syncs players, nearby NPCs, damage, spells and revive;
+    no quest, journal or save sync was found in the source. Needs zFriendlyFire. The G2 NotR Workshop item
+    2982365243 has player reports (stuck animations, host missing magic XP, summons not shown, no reconnect after
+    a server crash) and showed a "removed for violating guidelines" notice on 2026-10-30. Direct IP, port 1234;
+    VPN tools like Radmin are often used. Base of two newer forks, see Gothic-I-II-Universal-Coop and
+    gothic2-coop-steam.'
   sources:
   - https://github.com/Gothic-Workshop/GothicCoop
+  - https://github.com/Gothic-Workshop/GothicCoop/tree/broken-coop
+  - https://gitlab.com/gothiccoop/gothiccoop
+  - https://steamcommunity.com/sharedfiles/filedetails/comments/2982365243
   - https://vgtimes.com/games/gothic/files/73962-modo-cooperativo.html
-  checked: '2026-10-16'
+  checked: '2026-10-30'
 - game: 'Gothic II: Night of the Raven'
   year: 2003
   engine: ZenGin
@@ -739,6 +752,64 @@
   - https://github.com/skejt23/GothicMultiplayer
   - https://www.gamestar.de/artikel/gothic-mmo-hunderte-spieler-rollenspiel-traum-deutscher-server,3411240.html
   checked: '2026-10-16'
+- game: 'Gothic II: Night of the Raven'
+  year: 2003
+  engine: ZenGin
+  project: Gothic-I-II-Universal-Coop
+  url: https://github.com/corshaegar/Gothic-I-II-Universal-Coop
+  other_urls:
+  - https://github.com/corshaegar/Othello-Coop
+  kind: mod
+  status: alpha
+  coop_scope:
+    players_visible: 'yes'
+    story: 'yes'
+    enemies: 'yes'
+    world_state: partial
+    items: partial
+  players: 2+
+  networking: steam-relay
+  open_source: 'yes'
+  last_activity: 2026-10
+  qa: automated
+  notes: 'AGPL-3.0 Union plugin built on GothicCoop, for Gothic II NotR 2.6, Gothic 1 1.08k and Othello; docs in
+    German, menus in German and English. Version 0.3.1 (2026-10-30). The README claims host-led world, shared
+    dialogs, journal, chapters and quest XP, guild-aware dialogs, host-kept chests and ground items, shared quest
+    items, players in different worlds, shared save and load, joint new game, join over IP (UDP 9955) or Steam.
+    Its own one-PC test run reports Host 48/48 and Client 45 OK for separate worlds, 28/28 for chests and
+    inventory, with occasional mismatches in long runs. A two-person test over a real network is still open.
+    Not tested here.'
+  sources:
+  - https://github.com/corshaegar/Gothic-I-II-Universal-Coop
+  checked: '2026-10-30'
+- game: 'Gothic II: Night of the Raven'
+  year: 2003
+  engine: ZenGin
+  project: gothic2-coop-steam
+  url: https://github.com/DustyCK-png/gothic2-coop-steam
+  other_urls: []
+  kind: mod
+  status: prototype
+  coop_scope:
+    players_visible: 'yes'
+    story: partial
+    enemies: unknown
+    world_state: 'no'
+    items: 'no'
+  players: unknown
+  networking: steam-relay
+  open_source: 'yes'
+  last_activity: 2026-10
+  qa: automated
+  notes: 'AGPL-3.0 patch set on GothicCoop v60 for G2 NotR 2.6 fix and Union 1.0m, with a Steam lobby relay
+    (Spacewar AppID 480), host-owned saves, shared XP, a dialog lease and partial quest flag and journal sync.
+    Docs in Russian. Release v0.2.1-dialogue-fix (2026-10-23). The author says it is not full co-op yet: quest
+    items, NPC routines and world changes are not synced, and the latest two-client test run stopped at a host
+    start timeout. Not tested here.'
+  sources:
+  - https://github.com/DustyCK-png/gothic2-coop-steam
+  - https://github.com/DustyCK-png/gothic2-coop-steam/blob/main/BUGS.md
+  checked: '2026-10-30'
 - game: Gothic 3
   year: 2006
   engine: Genome
